@@ -1,0 +1,219 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanthakumar Wedding Invitation</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            font-family:'Poppins',sans-serif;
+            background:linear-gradient(rgba(139,94,60,0.85), rgba(139,94,60,0.85)),
+            url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop');
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            overflow:hidden;
+        }
+
+
+        @keyframes swing {
+            from { transform:translateY(0); }
+            to { transform:translateY(8px); }
+        }
+
+        .card {
+            background:#fff8f0;
+            width:95%;
+            max-width:750px;
+            padding:60px 30px 40px;
+            text-align:center;
+            border-radius:10px;
+            border:8px solid #d4af37;
+            box-shadow:0 20px 50px rgba(0,0,0,0.4);
+            position:relative;
+            overflow:hidden;
+            z-index:2;
+        }
+
+        .card::after {
+            content:"";
+            position:absolute;
+            top:0;
+            left:-100%;
+            width:50%;
+            height:100%;
+            background:linear-gradient(120deg, transparent, rgba(255,215,0,0.4), transparent);
+            animation:shine 4s infinite;
+        }
+
+        @keyframes shine {
+            0% { left:-100%; }
+            100% { left:150%; }
+        }
+
+        h1 {
+            font-family:'Playfair Display',serif;
+            font-size:42px;
+            color:#8b0000;
+            margin-bottom:15px;
+        }
+
+        .names {
+            font-family:'Playfair Display',serif;
+            font-size:36px;
+            font-weight:700;
+            margin:25px 0;
+            color:#b22222;
+            opacity:0;
+            transform:translateY(30px);
+            animation:fadeInUp 2s ease forwards 1s;
+        }
+
+        @keyframes fadeInUp {
+            to { opacity:1; transform:translateY(0); }
+        }
+
+        .date { font-size:22px; margin:20px 0; color:#5a3e2b; }
+        .details { margin-top:20px; font-size:17px; line-height:1.9; color:#4b2e1f; }
+
+        .countdown {
+            margin-top:25px;
+            font-size:20px;
+            font-weight:600;
+            color:#8b0000;
+        }
+
+        .whatsapp {
+            margin-top:25px;
+            display:inline-block;
+            background:#25D366;
+            color:white;
+            padding:12px 22px;
+            border-radius:30px;
+            font-weight:600;
+            text-decoration:none;
+            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+        }
+        .whatsapp:hover { background:#1ebe5d; }
+
+        canvas {
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            pointer-events:none;
+            z-index:1;
+        }
+
+        @media(max-width:480px){
+            h1{font-size:30px}
+            .names{font-size:26px}
+        }
+    </style>
+</head>
+<body>
+
+<div class="thoranam"></div>
+<canvas id="fireworks"></canvas>
+
+<!-- Temple Bell Sound -->
+<audio id="bell-sound">
+    <source src="https://actions.google.com/sounds/v1/alarms/temple_bell.ogg" type="audio/ogg">
+</audio>
+
+<!-- Nadaswaram Music -->
+<audio id="bg-music" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5f7f9b9c3b.mp3?filename=indian-traditional-nadaswaram-110997.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+    <h1>Wedding Invitation</h1>
+
+    <p>Together with our families, we invite you to celebrate our wedding</p>
+
+    <div class="names">Nanthakumar &amp; Kavya</div>
+
+    <div class="date">Sunday, 12 April 2026</div>
+
+    <div class="details">
+        <p><strong>Venue:</strong>
+            <a href="https://maps.app.goo.gl/ypWeeSdFqvAKFRNY9" target="_blank">
+            Raj Palace Mahal, Thanjavur
+            </a>
+        </p>
+        <p><strong>Muhurtham:</strong> 6:30 AM – 8:30 AM</p>
+        <p><strong>Reception:</strong> 11 April 2026 | 6:30 PM – 8:30 PM</p>
+    </div>
+
+    <div class="countdown" id="countdown"></div>
+
+    <a class="whatsapp" 
+    href="https://wa.me/919442938747?text=Invitation%20had%20been%20accepted" 
+    target="_blank">
+    📱 Save the Date on WhatsApp
+    </a>
+
+</div>
+
+<script>
+    const bell = document.getElementById("bell-sound");
+    const music = document.getElementById("bg-music");
+
+    // Autoplay Fix
+    window.addEventListener("click", function(){
+        bell.play();
+        music.play();
+    }, { once:true });
+
+    const weddingDate=new Date("April 12, 2026 06:30:00").getTime();
+    const countdownEl=document.getElementById("countdown");
+
+    const interval=setInterval(function(){
+        const now=new Date().getTime();
+        const distance=weddingDate-now;
+
+        if(distance>0){
+            const days=Math.floor(distance/(1000*60*60*24));
+            const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+            const seconds=Math.floor((distance%(1000*60))/1000);
+            countdownEl.innerHTML=days+"d "+hours+"h "+minutes+"m "+seconds+"s to go";
+        } else {
+            countdownEl.innerHTML="The Wedding Day is Here!";
+            clearInterval(interval);
+            startFireworks();
+        }
+    },1000);
+
+    // Simple Fireworks
+    const canvas=document.getElementById("fireworks");
+    const ctx=canvas.getContext("2d");
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+
+    function startFireworks(){
+        for(let i=0;i<100;i++){
+            setTimeout(()=>{
+                const x=Math.random()*canvas.width;
+                const y=Math.random()*canvas.height/2;
+                for(let j=0;j<50;j++){
+                    ctx.beginPath();
+                    ctx.arc(x+Math.random()*100-50,y+Math.random()*100-50,2,0,Math.PI*2);
+                    ctx.fillStyle="gold";
+                    ctx.fill();
+                }
+            },i*100);
+        }
+    }
+</script>
+
+</body>
+</html>
