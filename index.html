@@ -1,174 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanthakumar & Kavya Wedding Invitation | April 12, 2026</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Join us in celebrating the wedding of Nanthakumar & Kavya on April 12, 2026 at Raj Palace Mahal, Thanjavur. Muhurtham at 6:30 AM.">
+    <meta name="description"
+        content="Join us in celebrating the wedding of Nanthakumar & Kavya on April 12, 2026 at Raj Palace Mahal, Thanjavur. Muhurtham at 6:30 AM.">
     <meta name="keywords" content="wedding, invitation, Nanthakumar, Kavya, Thanjavur, wedding invitation">
     <meta name="author" content="Nanthakumar & Kavya">
-    
+
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Nanthakumar & Kavya Wedding Invitation">
-    <meta property="og:description" content="Join us in celebrating our wedding on April 12, 2026 at Raj Palace Mahal, Thanjavur. Muhurtham: 6:30 AM - 8:30 AM">
+    <meta property="og:description"
+        content="Join us in celebrating our wedding on April 12, 2026 at Raj Palace Mahal, Thanjavur. Muhurtham: 6:30 AM - 8:30 AM">
     <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200">
     <meta property="og:url" content="https://nantha-enk-wedding.vercel.app">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nanthakumar & Kavya Wedding Invitation">
     <meta name="twitter:description" content="Join us in celebrating our wedding on April 12, 2026">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💒</text></svg>">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💒</text></svg>">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
-            font-family:'Poppins',sans-serif;
-            background:linear-gradient(rgba(139,94,60,0.85), rgba(139,94,60,0.85)),
-            url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop');
-            background-size:cover;
-            background-position:center;
-            background-attachment:fixed;
-            display:flex;
-            justify-content:center;
-            align-items:flex-start;
-            min-height:100vh;
-            height:100vh;
-            overflow:hidden;
-            padding:20px 0 0 0;
-            margin:0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(139, 94, 60, 0.85), rgba(139, 94, 60, 0.85)),
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            /* display:flex; */
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            height: 100vh;
+            overflow: hidden;
+            padding: 20px 0 0 0;
+            margin: 0;
         }
 
         @keyframes swing {
-            from { transform:translateY(0); }
-            to { transform:translateY(8px); }
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(8px);
+            }
         }
 
         .card {
-            background:#fff8f0;
-            width:95%;
-            max-width:750px;
-            max-height:calc(100vh - 160px);
-            overflow-y:auto;
-            margin:0 auto;
-            padding:50px 30px 60px;
-            text-align:center;
-            border-radius:10px;
-            border:8px solid #d4af37;
-            box-shadow:0 20px 50px rgba(0,0,0,0.4);
-            position:relative;
-            z-index:2;
+            background: #fff8f0;
+            width: 95%;
+            max-width: 750px;
+            height: calc(100vh - 30vh);
+            /* max-height:calc(100vh - 160px); */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+            margin: 0 auto;
+            padding: 50px 30px 60px;
+            text-align: center;
+            border-radius: 10px;
+            border: 8px solid #d4af37;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 2;
         }
 
         h1 {
-            font-family:'Playfair Display',serif;
-            font-size:38px;
-            color:#8b0000;
-            margin-bottom:12px;
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: #8b0000;
+            margin-bottom: 12px;
         }
 
         .names {
-            font-family:'Playfair Display',serif;
-            font-size:32px;
-            font-weight:700;
-            margin:20px 0;
-            color:#b22222;
-            opacity:0;
-            transform:translateY(30px);
-            animation:fadeInUp 2s ease forwards 1s;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #b22222;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 2s ease forwards 1s;
         }
 
         @keyframes fadeInUp {
-            to { opacity:1; transform:translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .date { font-size:20px; margin:15px 0; color:#5a3e2b; }
-        .details { margin-top:18px; font-size:16px; line-height:1.7; color:#4b2e1f; }
+        .date {
+            font-size: 20px;
+            margin: 15px 0;
+            color: #5a3e2b;
+        }
+
+        .details {
+            margin-top: 18px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #4b2e1f;
+        }
 
         .countdown {
-            margin-top:20px;
-            font-size:18px;
-            font-weight:600;
-            color:#8b0000;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #8b0000;
         }
 
         .whatsapp {
-            margin-top:20px;
-            display:inline-block;
-            background:#25D366;
-            color:white;
-            padding:12px 22px;
-            border-radius:30px;
-            font-weight:600;
-            text-decoration:none;
-            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+            margin-top: 20px;
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
         }
-        .whatsapp:hover { background:#1ebe5d; }
+
+        .whatsapp:hover {
+            background: #1ebe5d;
+        }
 
         canvas {
-            position:fixed;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            pointer-events:none;
-            z-index:1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
         }
 
-        @media(max-width:480px){
+        @media(max-width:480px) {
             body {
-                height:100vh;
-                overflow:hidden;
+                height: 100vh;
+                overflow: hidden;
                 align-items: flex-start;
                 padding: 10px 0 0 0;
             }
 
-            h1{font-size:26px; margin-bottom:8px;}
-            .names{font-size:22px; margin:12px 0;}
-            .date{font-size:17px; margin:10px 0;}
-            .details{font-size:14px; margin-top:12px; line-height:1.5;}
-            .details p{margin:5px 0;}
-            .countdown{font-size:15px; margin-top:12px;}
-            .whatsapp{margin-top:12px; font-size:13px; padding:10px 20px;}
+            h1 {
+                font-size: 26px;
+                margin-bottom: 8px;
+            }
+
+            .names {
+                font-size: 22px;
+                margin: 12px 0;
+            }
+
+            .date {
+                font-size: 17px;
+                margin: 10px 0;
+            }
+
+            .details {
+                font-size: 14px;
+                margin-top: 12px;
+                line-height: 1.5;
+            }
+
+            .details p {
+                margin: 5px 0;
+            }
+
+            .countdown {
+                font-size: 15px;
+                margin-top: 12px;
+            }
+
+            .whatsapp {
+                margin-top: 12px;
+                font-size: 13px;
+                padding: 10px 20px;
+            }
 
             .card {
-                max-height:calc(100vh - 150px);
+                height: calc(100vh - 30vh);
                 padding: 25px 18px 35px;
                 overflow-y: scroll;
             }
 
             .floating-ad {
+                height: 30vh;
                 padding: 10px 8px 15px;
-                min-height: 130px !important;
+                /* min-height: 130px !important; */
                 display: block !important;
             }
-            
+
             .floating-ad h3 {
                 font-size: 12px;
                 margin-bottom: 3px;
             }
-            
+
             .floating-ad p {
                 font-size: 10px;
                 margin-bottom: 8px;
                 line-height: 1.3;
             }
-            
+
             .ad-buttons {
                 margin-top: 8px;
                 gap: 8px;
                 display: flex !important;
             }
-            
+
             .ad-btn {
                 padding: 8px 16px;
                 font-size: 11px;
@@ -179,14 +245,16 @@
 
         /* Bottom Fixed Advertisement Bar */
         .floating-ad {
-            position: fixed;
+            /* position: fixed;
             bottom: 0;
-            left: 0;
+            left: 0; */
+            height: 30vh;
+            margin-top: 20px;
             width: 100%;
             background: linear-gradient(135deg, #fff8e1, #f5d98b);
             border-top: 3px solid #d4af37;
             padding: 18px 10px;
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.25);
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.25);
             font-size: 14px;
             z-index: 9999;
             text-align: center;
@@ -230,7 +298,8 @@
             justify-content: center;
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
             min-width: 140px;
             border: none;
             visibility: visible;
@@ -239,123 +308,125 @@
 
         .ad-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
 
-        .website-btn { 
+        .website-btn {
             background: #d4af37 !important;
         }
-        
-        .instagram-btn { 
+
+        .instagram-btn {
             background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af) !important;
         }
-
     </style>
 </head>
+
 <body>
 
-<div class="thoranam"></div>
-<canvas id="fireworks"></canvas>
+    <div class="thoranam"></div>
+    <canvas id="fireworks"></canvas>
 
-<audio id="bell-sound">
-    <source src="https://actions.google.com/sounds/v1/alarms/temple_bell.ogg" type="audio/ogg">
-</audio>
+    <audio id="bell-sound">
+        <source src="https://actions.google.com/sounds/v1/alarms/temple_bell.ogg" type="audio/ogg">
+    </audio>
 
-<audio id="bg-music" loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5f7f9b9c3b.mp3?filename=indian-traditional-nadaswaram-110997.mp3" type="audio/mpeg">
-</audio>
+    <audio id="bg-music" loop>
+        <source
+            src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5f7f9b9c3b.mp3?filename=indian-traditional-nadaswaram-110997.mp3"
+            type="audio/mpeg">
+    </audio>
 
-<div class="card">
-    <h1>Wedding Invitation</h1>
+    <div class="card">
+        <h1>Wedding Invitation</h1>
 
-    <p>Together with our families, we invite you to celebrate our wedding</p>
+        <p>Together with our families, we invite you to celebrate our wedding</p>
 
-    <div class="names">Nanthakumar &amp; Kavya</div>
+        <div class="names">Nanthakumar &amp; Kavya</div>
 
-    <div class="date">Sunday, 12 April 2026</div>
+        <div class="date">Sunday, 12 April 2026</div>
 
-    <div class="details">
-        <p><strong>Venue:</strong>
-            <a href="https://maps.app.goo.gl/ypWeeSdFqvAKFRNY9" target="_blank">
-            Raj Palace Mahal, Thanjavur
-            </a>
+        <div class="details">
+            <p><strong>Venue:</strong>
+                <a href="https://maps.app.goo.gl/ypWeeSdFqvAKFRNY9" target="_blank">
+                    Raj Palace Mahal, Thanjavur
+                </a>
+            </p>
+            <p><strong>Muhurtham:</strong> 6:30 AM – 8:30 AM</p>
+            <p><strong>Reception:</strong> 11 April 2026 | 6:30 PM – 8:30 PM</p>
+        </div>
+
+        <div class="countdown" id="countdown"></div>
+
+        <a class="whatsapp" href="https://wa.me/919442938747?text=Invitation%20had%20been%20accepted" target="_blank">
+            📱 Save the Date on WhatsApp
+        </a>
+
+    </div>
+
+    <!-- Bottom Fixed Advertisement -->
+    <div class="floating-ad">
+        <h3>🌿 Thanjai Ammachis</h3>
+        <p>
+            Authentic 0 sugar Dry Fruits Ladoo, Coconut Ladoo, Tomato / Garlic / Ginger Mashed Pickle,
+            Idli Powder & Healthy Health Mix.
         </p>
-        <p><strong>Muhurtham:</strong> 6:30 AM – 8:30 AM</p>
-        <p><strong>Reception:</strong> 11 April 2026 | 6:30 PM – 8:30 PM</p>
+        <div class="ad-buttons">
+            <a href="https://thanjaiammachi.in/" target="_blank" class="ad-btn website-btn">🌐 Visit Website</a>
+            <a href="https://www.instagram.com/thanjai_ammachis/" target="_blank" class="ad-btn instagram-btn">📸
+                Instagram</a>
+        </div>
     </div>
 
-    <div class="countdown" id="countdown"></div>
+    <script>
+        const bell = document.getElementById("bell-sound");
+        const music = document.getElementById("bg-music");
 
-    <a class="whatsapp" 
-    href="https://wa.me/919442938747?text=Invitation%20had%20been%20accepted" 
-    target="_blank">
-    📱 Save the Date on WhatsApp
-    </a>
+        window.addEventListener("click", function () {
+            bell.play();
+            music.play();
+        }, { once: true });
 
-</div>
+        const weddingDate = new Date("April 12, 2026 06:30:00").getTime();
+        const countdownEl = document.getElementById("countdown");
 
-<!-- Bottom Fixed Advertisement -->
-<div class="floating-ad">
-    <h3>🌿 Thanjai Ammachis</h3>
-    <p>
-        Authentic 0 sugar Dry Fruits Ladoo, Coconut Ladoo, Tomato / Garlic / Ginger Mashed Pickle,
-        Idli Powder & Healthy Health Mix.
-    </p>
-    <div class="ad-buttons">
-        <a href="https://thanjaiammachi.in/" target="_blank" class="ad-btn website-btn">🌐 Visit Website</a>
-        <a href="https://www.instagram.com/thanjai_ammachis/" target="_blank" class="ad-btn instagram-btn">📸 Instagram</a>
-    </div>
-</div>
+        const interval = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
 
-<script>
-    const bell = document.getElementById("bell-sound");
-    const music = document.getElementById("bg-music");
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                countdownEl.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s to go";
+            } else {
+                countdownEl.innerHTML = "The Wedding Day is Here!";
+                clearInterval(interval);
+                startFireworks();
+            }
+        }, 1000);
 
-    window.addEventListener("click", function(){
-        bell.play();
-        music.play();
-    }, { once:true });
+        const canvas = document.getElementById("fireworks");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-    const weddingDate=new Date("April 12, 2026 06:30:00").getTime();
-    const countdownEl=document.getElementById("countdown");
-
-    const interval=setInterval(function(){
-        const now=new Date().getTime();
-        const distance=weddingDate-now;
-
-        if(distance>0){
-            const days=Math.floor(distance/(1000*60*60*24));
-            const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-            const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-            const seconds=Math.floor((distance%(1000*60))/1000);
-            countdownEl.innerHTML=days+"d "+hours+"h "+minutes+"m "+seconds+"s to go";
-        } else {
-            countdownEl.innerHTML="The Wedding Day is Here!";
-            clearInterval(interval);
-            startFireworks();
+        function startFireworks() {
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const x = Math.random() * canvas.width;
+                    const y = Math.random() * canvas.height / 2;
+                    for (let j = 0; j < 50; j++) {
+                        ctx.beginPath();
+                        ctx.arc(x + Math.random() * 100 - 50, y + Math.random() * 100 - 50, 2, 0, Math.PI * 2);
+                        ctx.fillStyle = "gold";
+                        ctx.fill();
+                    }
+                }, i * 100);
+            }
         }
-    },1000);
-
-    const canvas=document.getElementById("fireworks");
-    const ctx=canvas.getContext("2d");
-    canvas.width=window.innerWidth;
-    canvas.height=window.innerHeight;
-
-    function startFireworks(){
-        for(let i=0;i<100;i++){
-            setTimeout(()=>{
-                const x=Math.random()*canvas.width;
-                const y=Math.random()*canvas.height/2;
-                for(let j=0;j<50;j++){
-                    ctx.beginPath();
-                    ctx.arc(x+Math.random()*100-50,y+Math.random()*100-50,2,0,Math.PI*2);
-                    ctx.fillStyle="gold";
-                    ctx.fill();
-                }
-            },i*100);
-        }
-    }
-</script>
+    </script>
 
 </body>
+
 </html>
