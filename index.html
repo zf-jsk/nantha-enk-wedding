@@ -41,7 +41,7 @@
             min-height:100vh;
             overflow-x:hidden;
             padding-top:100px;
-            padding-bottom:140px; /* space for bottom bar */
+            padding-bottom:160px; /* space for bottom bar */
         }
 
         @keyframes swing {
@@ -123,21 +123,27 @@
             h1{font-size:30px}
             .names{font-size:26px}
             
+            body {
+                padding-bottom: 180px;
+            }
+            
             .floating-ad {
-                padding: 12px 8px;
+                padding: 15px 8px;
+                min-height: 140px;
             }
             
             .floating-ad h3 {
-                font-size: 14px;
+                font-size: 13px;
             }
             
             .floating-ad p {
-                font-size: 12px;
+                font-size: 11px;
             }
             
             .ad-btn {
-                padding: 8px 15px;
+                padding: 9px 18px;
                 font-size: 12px;
+                min-width: 120px;
             }
         }
 
@@ -149,57 +155,65 @@
             width: 100%;
             background: linear-gradient(135deg, #fff8e1, #f5d98b);
             border-top: 3px solid #d4af37;
-            padding: 15px 10px;
+            padding: 18px 10px;
             box-shadow: 0 -5px 20px rgba(0,0,0,0.25);
             font-size: 14px;
             z-index: 9999;
             text-align: center;
+            min-height: 120px;
         }
 
         .floating-ad h3 {
             color: #8b0000;
-            font-size: 16px;
-            margin-bottom: 6px;
+            font-size: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
         }
 
         .floating-ad p {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #444;
-            font-size: 13px;
+            font-size: 12px;
+            line-height: 1.4;
         }
 
         .ad-buttons {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            align-items: center;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-top: 5px;
+            margin-top: 8px;
         }
 
         .ad-btn {
-            text-decoration: none;
-            padding: 10px 20px;
+            text-decoration: none !important;
+            padding: 10px 24px;
             border-radius: 25px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
-            color: white !important;
-            display: inline-block;
+            color: #fff !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            min-width: 140px;
+            border: none;
         }
 
         .ad-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
         }
 
         .website-btn { 
-            background: #d4af37;
+            background: #d4af37 !important;
         }
         
         .instagram-btn { 
-            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af) !important;
         }
 
     </style>
@@ -250,8 +264,7 @@
 <div class="floating-ad">
     <h3>🌿 Thanjai Ammachis</h3>
     <p>
-        Authentic 0 sugar Dry Fruits Ladoo, Coconut Ladoo, Tomato / Garlic / Ginger Mashed Pickle,
-        Idli Powder & Healthy Health Mix.
+        Authentic 0 sugar Ladoos, Mashed Pickles, Idli Powder & Health Mix
     </p>
     <div class="ad-buttons">
         <a href="https://thanjaiammachi.in/" target="_blank" class="ad-btn website-btn">🌐 Visit Website</a>
