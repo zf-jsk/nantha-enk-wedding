@@ -44,7 +44,6 @@
             overflow:hidden;
         }
 
-
         @keyframes swing {
             from { transform:translateY(0); }
             to { transform:translateY(8px); }
@@ -139,6 +138,107 @@
             h1{font-size:30px}
             .names{font-size:26px}
         }
+
+        /* Advertisement Box */
+        .advertisement {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 260px;
+            background: #fff;
+            border: 3px solid #d4af37;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            font-size: 13px;
+            z-index: 10;
+        }
+
+        .advertisement h3 {
+            color: #8b0000;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .advertisement p {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .advertisement a {
+            color: #b22222;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .advertisement a:hover {
+            text-decoration: underline;
+        }
+            .names{font-size:26px}
+        }
+        
+        /* Floating Gold Badge */
+        .floating-ad {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 230px;
+        background: linear-gradient(135deg, #fff8e1, #f5d98b);
+        border: 2px solid #d4af37;
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 0 15px rgba(212,175,55,0.6);
+        font-size: 13px;
+        z-index: 9999;
+        animation: glow 2s infinite alternate;
+}
+
+     .ad-title {
+       font-weight: bold;
+       color: #8b0000;
+       margin-bottom: 8px;
+       font-size: 15px;
+}
+
+.ad-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.ad-btn {
+    text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.website {
+    background: #d4af37;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.insta-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(212,175,55,0.5); }
+    to { box-shadow: 0 0 20px rgba(212,175,55,0.9); }
+}
+
     </style>
 </head>
 <body>
@@ -167,7 +267,7 @@
 
     <div class="details">
         <p><strong>Venue:</strong>
-            <a href="https://maps.app.goo.gl/d6a47HCX7TD2yGTs9" target="_blank">
+            <a href="https://maps.app.goo.gl/ypWeeSdFqvAKFRNY9" target="_blank">
             Raj Palace Mahal, Thanjavur
             </a>
         </p>
@@ -183,6 +283,24 @@
     📱 Save the Date on WhatsApp
     </a>
 
+</div>
+
+<!-- Advertisement Corner -->
+<!-- Floating Badge Advertisement -->
+<div class="floating-ad">
+    <div class="ad-title"><strong>Thanjai Ammachis</strong></div>
+    <p>Authentic Homemade Traditional Products</p>
+
+    <div class="ad-buttons">
+        <a href="https://thanjaiammachi.in/" target="_blank" class="ad-btn website">
+            🌐 Website
+        </a>
+
+        <a href="https://www.instagram.com/thanjai_ammachis/" target="_blank" class="ad-btn instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="insta-icon">
+            Instagram
+        </a>
+    </div>
 </div>
 
 <script>
