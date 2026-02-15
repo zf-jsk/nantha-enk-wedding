@@ -37,11 +37,11 @@
             url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop');
             background-size:cover;
             background-position:center;
-            display:flex;
-            justify-content:center;
-            align-items:center;
+            display:block;
             min-height:100vh;
-            overflow:hidden;
+            overflow-x:hidden;
+            padding-top:100px;
+            padding-bottom:140px; /* space for bottom bar */
         }
 
         @keyframes swing {
@@ -53,6 +53,7 @@
             background:#fff8f0;
             width:95%;
             max-width:750px;
+            margin:0 auto;
             padding:60px 30px 40px;
             text-align:center;
             border-radius:10px;
@@ -61,22 +62,6 @@
             position:relative;
             overflow:hidden;
             z-index:2;
-        }
-
-        .card::after {
-            content:"";
-            position:absolute;
-            top:0;
-            left:-100%;
-            width:50%;
-            height:100%;
-            background:linear-gradient(120deg, transparent, rgba(255,215,0,0.4), transparent);
-            animation:shine 4s infinite;
-        }
-
-        @keyframes shine {
-            0% { left:-100%; }
-            100% { left:150%; }
         }
 
         h1 {
@@ -139,105 +124,50 @@
             .names{font-size:26px}
         }
 
-        /* Advertisement Box */
-        .advertisement {
+        /* Bottom Fixed Advertisement Bar */
+        .floating-ad {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 260px;
-            background: #fff;
-            border: 3px solid #d4af37;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            font-size: 13px;
-            z-index: 10;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #fff8e1, #f5d98b);
+            border-top: 3px solid #d4af37;
+            padding: 15px 10px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.25);
+            font-size: 14px;
+            z-index: 9999;
+            text-align: center;
         }
 
-        .advertisement h3 {
+        .floating-ad h3 {
             color: #8b0000;
-            margin-bottom: 8px;
             font-size: 16px;
+            margin-bottom: 6px;
         }
 
-        .advertisement p {
-            margin-bottom: 8px;
-            line-height: 1.5;
+        .floating-ad p {
+            margin-bottom: 10px;
             color: #444;
         }
 
-        .advertisement a {
-            color: #b22222;
-            font-weight: 600;
+        .ad-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .ad-btn {
             text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            color: white;
         }
 
-        .advertisement a:hover {
-            text-decoration: underline;
-        }
-            .names{font-size:26px}
-        }
-        
-        /* Floating Gold Badge */
-        .floating-ad {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 230px;
-        background: linear-gradient(135deg, #fff8e1, #f5d98b);
-        border: 2px solid #d4af37;
-        border-radius: 15px;
-        padding: 15px;
-        box-shadow: 0 0 15px rgba(212,175,55,0.6);
-        font-size: 13px;
-        z-index: 9999;
-        animation: glow 2s infinite alternate;
-}
-
-     .ad-title {
-       font-weight: bold;
-       color: #8b0000;
-       margin-bottom: 8px;
-       font-size: 15px;
-}
-
-.ad-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 10px;
-}
-
-.ad-btn {
-    text-decoration: none;
-    padding: 6px 8px;
-    border-radius: 8px;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: white;
-}
-
-.website {
-    background: #d4af37;
-}
-
-.instagram {
-    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-}
-
-.insta-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 6px;
-}
-
-@keyframes glow {
-    from { box-shadow: 0 0 10px rgba(212,175,55,0.5); }
-    to { box-shadow: 0 0 20px rgba(212,175,55,0.9); }
-}
+        .website-btn { background: #d4af37; }
+        .instagram-btn { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af); }
 
     </style>
 </head>
@@ -246,12 +176,10 @@
 <div class="thoranam"></div>
 <canvas id="fireworks"></canvas>
 
-<!-- Temple Bell Sound -->
 <audio id="bell-sound">
     <source src="https://actions.google.com/sounds/v1/alarms/temple_bell.ogg" type="audio/ogg">
 </audio>
 
-<!-- Nadaswaram Music -->
 <audio id="bg-music" loop>
     <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5f7f9b9c3b.mp3?filename=indian-traditional-nadaswaram-110997.mp3" type="audio/mpeg">
 </audio>
@@ -285,20 +213,23 @@
 
 </div>
 
-<div class="advertisement">
+<!-- Bottom Fixed Advertisement -->
+<div class="floating-ad">
     <h3>🌿 Thanjai Ammachis</h3>
-    <p>Authentic 0 sugar healthy dry fruits ladoo, Coconut ladoo, Tomato mashed pickle, Garlic mashed pickle, Ginger mashed pickle, Idli powder & Healthy health mix.</p>
-    
-    <p>🌐 <a href="https://thanjaiammachi.in/" target="_blank">Visit Website</a></p>
-
-    <p>📸 <a href="https://www.instagram.com/thanjai_ammachis/" target="_blank">Follow us on Instagram</a></p>
+    <p>
+        Authentic 0 sugar Dry Fruits Ladoo, Coconut Ladoo, Tomato / Garlic / Ginger Mashed Pickle,
+        Idli Powder & Healthy Health Mix.
+    </p>
+    <div class="ad-buttons">
+        <a href="https://thanjaiammachi.in/" target="_blank" class="ad-btn website-btn">🌐 Visit Website</a>
+        <a href="https://www.instagram.com/thanjai_ammachis/" target="_blank" class="ad-btn instagram-btn">📸 Instagram</a>
+    </div>
 </div>
 
 <script>
     const bell = document.getElementById("bell-sound");
     const music = document.getElementById("bg-music");
 
-    // Autoplay Fix
     window.addEventListener("click", function(){
         bell.play();
         music.play();
@@ -324,7 +255,6 @@
         }
     },1000);
 
-    // Simple Fireworks
     const canvas=document.getElementById("fireworks");
     const ctx=canvas.getContext("2d");
     canvas.width=window.innerWidth;
